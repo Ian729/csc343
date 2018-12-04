@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE RECIPES [
+   <!ELEMENT RECIPES (RECIPE)+>
+   <!ELEMENT RECIPE (INGREDIENTS, STEPS)>
+   <!ATTLIST RECIPE name CDATA #REQUIRED>
+   <!ATTLIST RECIPE type CDATA #IMPLIED>
+   <!ATTLIST RECIPE keywords CDATA #IMPLIED>
+   <!ELEMENT INGREDIENTS (INGREDIENT)+>
+   <!ELEMENT INGREDIENT (NAME, QUANTITY)>
+   <!ELEMENT NAME (#PCDATA)>
+   <!ELEMENT QUANTITY EMPTY>
+   <!ATTLIST QUANTITY amount CDATA #REQUIRED>
+   <!ATTLIST QUANTITY units CDATA #IMPLIED>
+   <!ELEMENT STEPS (STEP*)>
+   <!ELEMENT STEP (#PCDATA)>
+]>
+<RECIPES>
+   <RECIPE name="hard-boiled egg" type="breakfast" keywords="protein easy">
+      <INGREDIENTS>
+         <INGREDIENT>
+             <NAME>egg</NAME>
+             <QUANTITY amount="1"/>
+         </INGREDIENT>
+      </INGREDIENTS>
+      <STEPS>
+         <STEP>
+            Boil for 12 minutes.
+         </STEP>
+      </STEPS>
+   </RECIPE>
+   <RECIPE name="cookie" type="dessert">
+        <INGREDIENTS>
+	    <INGREDIENT>
+	        <NAME>egg</NAME>
+	        <QUANTITY amount="2"/>
+	    </INGREDIENT>
+	    <INGREDIENT>
+		<NAME>cup of flour</NAME>
+		<QUANTITY amount="2"/>
+	    </INGREDIENT>
+            <INGREDIENT>
+                <NAME>soda</NAME>
+                <QUANTITY amount="2"/>
+            </INGREDIENT>
+	</INGREDIENTS>
+	<STEPS>
+	    <STEP>
+		Preheat oven to 350 degrees F (175 degrees C).
+	    </STEP>
+	    <STEP>
+		In a medium bowl, stir together the flour, baking soda, and salt
+	    </STEP>
+	</STEPS>
+   </RECIPE>
+</RECIPES>

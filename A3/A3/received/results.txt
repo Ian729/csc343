@@ -1,0 +1,175 @@
+Running Assignment 3 XPath/XQuery Solutions
+
+============================== Query q1  ==============================
+
+------ raw output ------
+
+<dbjobs><posting pID="p1">
+    <position>
+      SQL Programmer
+    </position>
+    <reqSkill what="SQL" level="3" importance="5"/>
+    <reqSkill what="SQL" level="5" importance="3"/>
+    <questions>
+      <question qID="q100">
+        question100
+      </question>
+    </questions>
+  </posting></dbjobs>
+
+------ formatted output (therefore well-formed) ------
+
+<?xml version="1.0" standalone="no"?>
+<dbjobs>
+  <posting pID="p1">
+    <position>
+      SQL Programmer
+    </position>
+    <reqSkill what="SQL" level="3" importance="5"/>
+    <reqSkill what="SQL" level="5" importance="3"/>
+    <questions>
+      <question qID="q100">
+        question100
+      </question>
+    </questions>
+  </posting>
+</dbjobs>
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+
+============================== Query q2  ==============================
+
+------ raw output ------
+
+<important><posting pID="p1">
+    <position>
+      SQL Programmer
+    </position>
+    <reqSkill what="SQL" level="3" importance="5"/>
+    <reqSkill what="SQL" level="5" importance="3"/>
+    <questions>
+      <question qID="q100">
+        question100
+      </question>
+    </questions>
+  </posting><posting pID="p3">
+    <position>
+      R Programmer
+    </position>
+    <reqSkill what="R" level="5" importance="1"/>
+    <reqSkill what="LaTeX" level="3" importance="5"/>
+  </posting></important>
+
+------ formatted output (therefore well-formed) ------
+
+<?xml version="1.0" standalone="no"?>
+<important>
+  <posting pID="p1">
+    <position>
+      SQL Programmer
+    </position>
+    <reqSkill what="SQL" level="3" importance="5"/>
+    <reqSkill what="SQL" level="5" importance="3"/>
+    <questions>
+      <question qID="q100">
+        question100
+      </question>
+    </questions>
+  </posting>
+  <posting pID="p3">
+    <position>
+      R Programmer
+    </position>
+    <reqSkill what="R" level="5" importance="1"/>
+    <reqSkill what="LaTeX" level="3" importance="5"/>
+  </posting>
+</important>
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+
+============================== Query q3  ==============================
+
+------ raw output ------
+
+<qualified><candidate rid="r02" numskills="5" citizenzhip="         Chinese       "><name>
+          Ian
+        </name></candidate></qualified>
+
+------ formatted output (therefore well-formed) ------
+
+<?xml version="1.0" standalone="no"?>
+<qualified>
+  <candidate rid="r02" numskills="5" citizenzhip="         Chinese       ">
+    <name>
+          Ian
+        </name>
+  </candidate>
+</qualified>
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+
+============================== Query q4  ==============================
+
+------ raw output ------
+
+<bestskills><best resume="" position="02"><enthusiasm>6</enthusiasm></best><best resume="" position="02"><collegiality>210</collegiality></best></bestskills>
+
+------ formatted output (therefore well-formed) ------
+
+<?xml version="1.0" standalone="no"?>
+<bestskills>
+  <best resume="" position="02">
+    <enthusiasm>6</enthusiasm>
+  </best>
+  <best resume="" position="02">
+    <collegiality>210</collegiality>
+  </best>
+</bestskills>
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+
+============================== Query q5  ==============================
+
+------ raw output ------
+
+<histogram><skill name="SQL"><count level="1" n="0"/><count level="2" n="0"/><count level="3" n="2"/><count level="4" n="0"/><count level="5" n="0"/></skill><skill name="LaTeX"><count level="1" n="0"/><count level="2" n="0"/><count level="3" n="0"/><count level="4" n="0"/><count level="5" n="0"/></skill><skill name="R"><count level="1" n="0"/><count level="2" n="0"/><count level="3" n="0"/><count level="4" n="0"/><count level="5" n="1"/></skill></histogram>
+
+------ formatted output (therefore well-formed) ------
+
+<?xml version="1.0" standalone="no"?>
+<histogram>
+  <skill name="SQL">
+    <count level="1" n="0"/>
+    <count level="2" n="0"/>
+    <count level="3" n="2"/>
+    <count level="4" n="0"/>
+    <count level="5" n="0"/>
+  </skill>
+  <skill name="LaTeX">
+    <count level="1" n="0"/>
+    <count level="2" n="0"/>
+    <count level="3" n="0"/>
+    <count level="4" n="0"/>
+    <count level="5" n="0"/>
+  </skill>
+  <skill name="R">
+    <count level="1" n="0"/>
+    <count level="2" n="0"/>
+    <count level="3" n="0"/>
+    <count level="4" n="0"/>
+    <count level="5" n="1"/>
+  </skill>
+</histogram>
+
+------ checking validity of output ------
+
+Are there any validity errors? (no news is good news)
+

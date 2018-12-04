@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE interviews [
+<!ELEMENT interviews (interview+, interviewer+)>
+<!ELEMENT interview (date,time,location,assessment)>
+<!-- References to the resume of the interviewee and the posting ID. -->
+<!ATTLIST interview rID CDATA #REQUIRED
+                    pID CDATA #REQUIRED
+                    sID IDREF #REQUIRED>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!-- All assessment scores must consist of numeric scores from 0 to 100 -->
+<!ELEMENT assessment (answers?, techProficiency, communication, enthusiasm, collegiality?)>
+<!ELEMENT answers (answer+)>
+<!ELEMENT answer (#PCDATA)>
+<!-- Refers to a posting's question ID -->
+<!ATTLIST answer qID CDATA #REQUIRED>
+<!ELEMENT techProficiency (#PCDATA)>
+<!ELEMENT communication (#PCDATA)>
+<!ELEMENT enthusiasm (#PCDATA)>
+<!ELEMENT collegiality (#PCDATA)>
+<!ELEMENT interviewer (forename,surname,honorific+,title*)>
+<!ATTLIST interviewer sID ID #REQUIRED>
+<!ELEMENT forename (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT honorific (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+]>
+
+<interviews>
+    <interview rID="01" pID="02" sID="03">
+        <date>2017-04-03</date>
+        <time>20:38:02</time>
+        <location>Bahen Center for Information Technology</location>
+        <assessment>
+            <answer qID="1">True</answer>
+            <techProficiency>5</techProficiency>
+            <communication>5</communication>
+            <enthusiasm>6</enthusiasm>
+            <collegiality>6</collegiality>
+            <interviewer>
+                <forename>Weixiang</forename>
+                <surname>Zheng</surname>
+                <honorific>Mr.</honorific>
+                <title>Chief Technology Officer</title>
+            </interviewer>
+        </assessment>
+    </interview>
+    <interview rID="04" pID="02" sID="05">
+        <date>2017-04-03</date>
+        <time>20:38:02</time>
+        <location>Bahen Center for Information Technology</location>
+        <assessment>
+            <answer qID="1">True</answer>
+            <techProficiency>103</techProficiency>
+            <communication>101</communication>
+            <enthusiasm>-10</enthusiasm>
+            <collegiality>210</collegiality>
+            <interviewer>
+                <forename>Xiao</forename>
+                <surname>You</surname>
+                <honorific>Mrs.</honorific>
+                <title>Object Oriented Programming</title>
+            </interviewer>
+        </assessment>
+    </interview>
+</interviews>
